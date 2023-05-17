@@ -16,16 +16,25 @@ export class Land {
   folio: string;
 
   @Column({ type: 'varchar', default: '' })
-  owner: string;
+  measures: string;
 
   @Column({ type: 'json', default: '[]' })
   adjoining: object[];
 
-  @Column({ type: 'varchar', nullable: true })
-  locationURL: string;
+  @Column({ type: 'bool', default: false })
+  licenseStatus: boolean;
+
+  @Column({ type: 'bool', default: false })
+  debtStatus: boolean;
+
+  @Column({ type: 'varchar', default: '' })
+  agrarianCore: string;
 
   @Column({ type: 'json', default: '[]' })
   observations: string[];
+
+  @Column({ type: 'varchar', nullable: true })
+  locationURL: string;
 
   @Column({ type: 'bool', default: false })
   isApproved: boolean;
