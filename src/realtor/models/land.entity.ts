@@ -16,6 +16,9 @@ export class Land {
   folio: string;
 
   @Column({ type: 'varchar', default: '' })
+  residencial: string;
+
+  @Column({ type: 'varchar', default: '' })
   measures: string;
 
   @Column({ type: 'json', default: '[]' })
